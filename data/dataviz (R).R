@@ -19,7 +19,7 @@ high<-stock$High
 low<-stock$Low
 close<-stock$Close
 
-#the data is in the range of 80 to 145 on the y axis. This was checked using the min and max funcitons in R
+#the data is in the range of 2 to 70 on the y axis. This was checked using the min and max funcitons in R
 
 
 #Dataviz
@@ -34,10 +34,10 @@ plot_stock<-ggplot(stock, aes(x=Date)) +
     geom_line(aes(y=low, color = "low"))+
     geom_line(aes(y=close, color = "close"))+
     labs(title = "Stock Data Plot", x ="Day", y="Stock Value")+
-  ylim(80,145)
+  ylim(2,70)
 
 plot_stock #to create the plot and show it in the console
 
 #Saving the plot as a PNG
 
-ggsave("stockTS.png", plot = plot_stock, height = 8, width = 10, dpi = 300)
+ggsave("stockTS.png", plot = plot_stock, height = 16, width = 40, dpi = 300)
