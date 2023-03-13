@@ -75,7 +75,6 @@ def sine_data_generation (no, seq_len, dim):
     data.append(temp)
                 
   return data
-    
 
 def real_data_loading (data_name, seq_len):
   """Load and preprocess real-world datasets.
